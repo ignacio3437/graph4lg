@@ -70,7 +70,8 @@ genepop_to_genind <- function(path,
 
   # Open the text file
   data_gpop <- utils::read.table(file = path,
-                                 sep = "\t")
+                                 sep = "\t",
+                                fill = TRUE)
   # Separate the columns of the text file
   sep_col <- suppressWarnings(tidyr::separate(data_gpop, col = 1,
                                               sep = " ",
